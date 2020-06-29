@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
   </head>
   <body>
-    <h1>Hello there! Good to see you here</h1>
+    <h1>h3ll0 $y0urn4m3! 600d 70 533 y0u h3r3</h1>
     <hr><br>
     <div id="typed-strings">
       <p>Hey! I am Kaustubh^500</p>
@@ -17,7 +17,8 @@
       <p>If you're looking to get in touch with me</p>
       <p>If you're looking to get in touch with the actual me,^400 find me on Telegram <a href="https://t.me/nikochiko">@nikochiko</a></p>
       <p>Or just email me on <a href="mailto:ktvm42@gmail.com">ktvm42@gmail.com</a></p>
-      <p>Though of course, you can stay here and enjoy this animation ^500 (spoiler alert: it's a forever loop!)</p>
+      <p>Though of course, you can stay here and enjoy this animation ^500</p>
+      <p>(spoiler alert: it's a forever loop!)</p>
     </div>
     <span id="typed"></span>
     <script>
@@ -28,6 +29,63 @@
         loop: true
       });
     </script>
+    <br><br>
+    <h2>Send me a message without hassle</h2>
+    I am the <a href="https://t.me/WhoCameByBot">WhoCameByBot</a>. I can let Kaustubh know you came by
+    <br><br>
+    <textarea id="bot-text" value="$username" placeholder="Tell me something so I can forward it to Kaustubh for you. Also add your contact info if you want me to know who you are..."></textarea>
+    <br>
+    <button id="whocamebybot-submit" action="submit">🚀Send</button>
+    <script type="text/javascript">
+      const visitorTextBtn = document.getElementById('whocamebybot-submit');
+      const visitorBtnHandler = (e) => {
+        e.preventDefault();
+        const visitorbotText = document.getElementById('bot-text');
+        if (visitorbotText.value) {
+          fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=${encodeURIComponent(visitorbotText.value)}`, {
+            mode: 'no-cors'
+          })
+            .then(resp => {
+              console.log(resp);
+          });
+          visitorbotText.value = '';
+        } else {
+          console.log(visitorbotText.value);
+        }
+      };
+      visitorTextBtn.addEventListener('click', visitorBtnHandler, false);
+    </script>
+    <br><br><br>
+    <h2>Know me</h2>
+    <div class="know-me" id="know-me">
+       <div id="typed-strings-2">
+          <p>I do not exist</p>
+          <p></p>
+          <p></p>
+          <p>I do not exist</p>
+          <p></p>
+          <p></p>
+          <p>I do not exist</p>
+        </div>
+        <span id="typed-2"></span>
+        <script>
+          var typed2 = new Typed('#typed-2', {
+            stringsElement: '#typed-strings-2',
+            startDelay: 0,
+            backDelay: 100,
+            loop: true,
+            // shuffle: true,
+            fadeOut: true,
+            fadeOutDelay: 0,
+          });
+        </script>
+        <div class="my-info">
+          <p>I am Kaustubh Maske Patil, aka <b>nikochiko</b></p>
+          <p>I love play around with code, building small tools to do stuff, yada yada</p>
+          <p>I like to watch anime and read/watch random interesting stuff</p>
+          <p>More content to be added... Very soon...</p>
+        </div>
+      </div>
     <br><br><br>
     <div id="box">
       <p>Telegram: <a href="https://t.me/nikochiko">@nikochiko</a></p>

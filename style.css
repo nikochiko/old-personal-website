@@ -2,7 +2,7 @@ body {
   font-family: courier new, monospace;
   color: #0f8;
   margin: 30px;
-  background: #111 radial-gradient(#000, #111) no-repeat center center;
+  background: #111;
   font-size: 13px;
   height: 100vh
 }
@@ -10,6 +10,10 @@ body {
 a {
   color: inherit;
   text-decoration: underline;
+}
+
+.my-info {
+  font-size: 15px;
 }
 
 #terminal {
@@ -22,4 +26,23 @@ a {
   width: 30%;
   border: 5px solid white;
   text-align: center;
+}
+
+#bot-text {
+  color: #0f8;
+  resize: none;
+  margin: 0 auto;
+  height: 100px;
+  width: 50%;
+  background: #111;
+  border: 2px solid #0f8;
+  outline: none;
+}
+
+#whocamebybot-submit {
+  border: 2px solid #0f8;
+  background: #222;
+  color: #0f8;
+  width: 100px;
+  height: 40px;
 }
