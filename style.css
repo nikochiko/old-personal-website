@@ -46,3 +46,7 @@ a {
   width: 100px;
   height: 40px;
 }
+
+#bot-text::placeholder {
+  color: #00964a;
+}
