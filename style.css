@@ -1,19 +1,15 @@
 body {
   font-family: courier new, monospace;
   color: #0f8;
-  margin: 30px;
+  margin: 2em;
   background: #111;
-  font-size: 13px;
-  height: 100vh
+  font-size: 1em;
+  height: 100vh;
 }
 
 a {
   color: inherit;
   text-decoration: underline;
-}
-
-.my-info {
-  font-size: 15px;
 }
 
 #terminal {
@@ -24,7 +20,7 @@ a {
 #box {
   margin: 0 auto;
   width: 30%;
-  border: 5px solid white;
+  border: 0.4em solid white;
   text-align: center;
 }
 
@@ -32,21 +28,22 @@ a {
   color: #0f8;
   resize: none;
   margin: 0 auto;
-  height: 100px;
+  height: 8em;
   width: 50%;
   background: #111;
-  border: 2px solid #0f8;
+  border: 0.25em solid #0f8;
   outline: none;
 }
 
 #whocamebybot-submit {
-  border: 2px solid #0f8;
-  background: #222;
-  color: #0f8;
-  width: 100px;
-  height: 40px;
+  font-family: inherit;
+  border: 0.25em solid #0f8;
+  background: #0f8;
+  color: #111;
+  width: 7.5em;
+  height: 2.5em;
 }
 
 #bot-text::placeholder {
-  color: #00964a;
+  color: #14804e;
 }

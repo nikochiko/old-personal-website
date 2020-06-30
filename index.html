@@ -30,12 +30,17 @@
       });
     </script>
     <br><br>
-    <h2>Send me a message without hassle</h2>
-    I am the <a href="https://t.me/WhoCameByBot">WhoCameByBot</a>. I can let Kaustubh know you came by
-    <br><br>
-    <textarea id="bot-text" value="$username" placeholder="Tell me something so I can forward it to Kaustubh for you. Also add your contact info if you want me to know who you are..."></textarea>
-    <br>
-    <button id="whocamebybot-submit" action="submit">🚀Send</button>
+
+    <h2>Send me a message</h2>
+    <p>
+      This is the <a href="https://t.me/WhoCameByBot">WhoCameByBot</a> taking over.
+      I can let Kaustubh know that you came by
+    </p>
+    <p>
+      <textarea id="bot-text" value="$username" placeholder="Tell me something so I can forward it to Kaustubh for you. Don't forget your contact details!"></textarea>
+      <br>
+      <button id="whocamebybot-submit" action="submit">🚀Send</button>
+    </p>
     <script type="text/javascript">
       const visitorTextBtn = document.getElementById('whocamebybot-submit');
       const visitorBtnHandler = (e) => {
@@ -55,38 +60,17 @@
       };
       visitorTextBtn.addEventListener('click', visitorBtnHandler, false);
     </script>
-    <br><br><br>
+    <!-- <br><br><br> -->
     <h2>Know me</h2>
     <div class="know-me" id="know-me">
-       <div id="typed-strings-2">
-          <p>I do not exist</p>
-          <p></p>
-          <p></p>
-          <p>I do not exist</p>
-          <p></p>
-          <p></p>
-          <p>I do not exist</p>
-        </div>
-        <span id="typed-2"></span>
-        <script>
-          var typed2 = new Typed('#typed-2', {
-            stringsElement: '#typed-strings-2',
-            startDelay: 0,
-            backDelay: 100,
-            loop: true,
-            // shuffle: true,
-            fadeOut: true,
-            fadeOutDelay: 0,
-          });
-        </script>
-        <div class="my-info">
-          <p>I am Kaustubh Maske Patil, aka <b>nikochiko</b></p>
-          <p>I love playing around with public APIs and building custom tools to grab interesting data.</p>
-          <p>Almost all my projects are open-sourced, so you can check that out on <a href="https://github.com/nikochiko">my GitHub</a></p>
-          <p>Apart from that, I like to watch anime and read/watch random interesting stuff</p>
-          <p>More content to be added... Very soon...</p>
-        </div>
+      <div class="my-info">
+        <p>I am Kaustubh Maske Patil, aka <b>nikochiko</b></p>
+        <p>I love playing around with public APIs and building custom tools to grab interesting data.</p>
+        <p>Almost all my projects are open-sourced, so you can check that out on <a href="https://github.com/nikochiko">my GitHub</a></p>
+        <p>Apart from that, I like to watch anime and read/watch random interesting stuff</p>
+        <p>More content to be added... Very soon...</p>
       </div>
+    </div>
     <br><br><br>
     <div id="box">
       <p>Telegram: <a href="https://t.me/nikochiko">@nikochiko</a></p>
