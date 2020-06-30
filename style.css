@@ -42,6 +42,7 @@ a {
   color: #111;
   width: 7.5em;
   height: 2.5em;
+  cursor: pointer;
 }
 
 #bot-text::placeholder {
