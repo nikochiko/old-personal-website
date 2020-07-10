@@ -1,8 +1,14 @@
+:root {
+  --primary-color: #0f8;
+  --background-color: #222;
+  --invert-font-color: #222;
+}
+
 body {
   font-family: courier new, monospace;
-  color: #0f8;
+  color: var(--primary-color);
   margin: 2em;
-  background: #111;
+  background: var(--background-color);
   font-size: 1em;
   height: 100vh;
 }
@@ -10,6 +16,11 @@ body {
 a {
   color: inherit;
   text-decoration: underline;
+}
+
+a:hover {
+  background-color: var(--primary-color);
+  color: var(--invert-font-color);
 }
 
 #box {
@@ -21,21 +32,21 @@ a {
 }
 
 #bot-text {
-  color: #0f8;
+  color: var(--primary-color);
   resize: none;
   margin: 0 auto;
   height: 8em;
   width: 50%;
-  background: #111;
-  border: 0.25em solid #0f8;
+  background: var(--background-color);
+  border: 0.25em solid var(--primary-color);
   outline: none;
 }
 
 #whocamebybot-submit {
   font-family: inherit;
-  border: 0.25em solid #0f8;
-  background: #0f8;
-  color: #111;
+  border: 0.25em solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--background-color);
   width: 7.5em;
   height: 2.5em;
   cursor: pointer;
