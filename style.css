@@ -12,16 +12,12 @@ a {
   text-decoration: underline;
 }
 
-#terminal {
-  white-space: pre-wrap;
-  line-height: 1.4;
-}
-
 #box {
   margin: 0 auto;
   width: 30%;
   border: 0.4em solid white;
   text-align: center;
+  margin-top: 2em;
 }
 
 #bot-text {
@@ -47,4 +43,9 @@ a {
 
 #bot-text::placeholder {
   color: #14804e;
+}
+
+.container {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
 }
