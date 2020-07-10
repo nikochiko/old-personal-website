@@ -2,6 +2,7 @@
   --primary-color: #0f8;
   --background-color: #222;
   --invert-font-color: #222;
+  --secondary-color: #ddd;
 }
 
 body {
@@ -59,4 +60,8 @@ a:hover {
 .container {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
+}
+
+.heading {
+  color: var(--primary-color);
 }
