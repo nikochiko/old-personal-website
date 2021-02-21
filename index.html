@@ -54,7 +54,7 @@
       const visitorBtnHandler = (e) => {
         e.preventDefault();
         if (visitorbotText.value) {
-          fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=Message: ${encodeURIComponent(visitorbotText.value)}`, {
+          fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=#message Message: ${encodeURIComponent(visitorbotText.value)}`, {
             mode: 'no-cors'
           })
             .then(resp => {
@@ -69,7 +69,7 @@
 
       // this should be changed to something else. add a new box for contact information
       const visitorTextInputEventHandler = (e) => {
-        fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=Text changed: ${encodeURIComponent(visitorbotText.value)}`, {
+        fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=#textchange Text changed: ${encodeURIComponent(visitorbotText.value)}`, {
           mode: 'no-cors'
         });
       };
