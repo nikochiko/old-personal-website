@@ -44,17 +44,22 @@
       I can let Kaustubh know that you came by
     </p>
     <p>
+      <input id="bot-sender-details" placeholder="[Optional] What's your name?"></input>
       <textarea id="bot-text" value="$username" placeholder="Tell me something so I can forward it to Kaustubh for you. Don't forget your contact details!"></textarea>
       <br>
       <button id="whocamebybot-submit" action="submit">🚀Send</button>
     </p>
     <script type="text/javascript">
+      fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=You have a new visitor!`, {
+        mode: 'no-cors'
+      });
+
       const visitorTextBtn = document.getElementById('whocamebybot-submit');
       const visitorbotText = document.getElementById('bot-text');
       const visitorBtnHandler = (e) => {
         e.preventDefault();
         if (visitorbotText.value) {
-          fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=#message Message: ${encodeURIComponent(visitorbotText.value)}`, {
+          fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=${encodeURIComponent(visitorbotText.value)}`, {
             mode: 'no-cors'
           })
             .then(resp => {
@@ -66,14 +71,6 @@
         }
       };
       visitorTextBtn.addEventListener('click', visitorBtnHandler, false);
-
-      // this should be changed to something else. add a new box for contact information
-      const visitorTextInputEventHandler = (e) => {
-        fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=#textchange Text changed: ${encodeURIComponent(visitorbotText.value)}`, {
-          mode: 'no-cors'
-        });
-      };
-      visitorbotText.addEventListener('input', visitorTextInputEventHandler);
     </script>
     <div id="box">
       <p>Telegram: <a href="https://t.me/nikochiko">@nikochiko</a></p>
