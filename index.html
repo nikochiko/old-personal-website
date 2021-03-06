@@ -44,8 +44,8 @@
       I can let Kaustubh know that you came by
     </p>
     <p>
-      <input id="bot-sender-details" placeholder="[Optional] What's your name?"></input>
       <textarea id="bot-text" value="$username" placeholder="Tell me something so I can forward it to Kaustubh for you. Don't forget your contact details!"></textarea>
+      <input id="bot-sender-details" placeholder="Add in your name and contact details here! (optional)"></input>
       <br>
       <button id="whocamebybot-submit" action="submit">🚀Send</button>
     </p>
@@ -56,15 +56,26 @@
 
       const visitorTextBtn = document.getElementById('whocamebybot-submit');
       const visitorbotText = document.getElementById('bot-text');
+      const visitorSenderDetails = document.getElementById('bot-sender-details');
       const visitorBtnHandler = (e) => {
         e.preventDefault();
         if (visitorbotText.value) {
-          fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=${encodeURIComponent(visitorbotText.value)}`, {
-            mode: 'no-cors'
-          })
+          if (visitorSenderDetails.value) {
+            fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=${encodeURIComponent("Sender details: " + visitorSenderDetails.value + "\n" + "Message: " + visitorbotText.value)}`, {
+              mode: 'no-cors'
+            })
             .then(resp => {
               console.log(resp);
-          });
+            });
+          } else {
+            fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=Message: ${encodeURIComponent(visitorbotText.value)}`, {
+              mode: 'no-cors'
+            })
+            .then(resp => {
+              console.log(resp);
+            });
+
+          }
           visitorbotText.value = '';
         } else {
           console.log(visitorbotText.value);
