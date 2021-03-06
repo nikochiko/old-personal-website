@@ -67,6 +67,7 @@
             .then(resp => {
               console.log(resp);
             });
+            visitorSenderDetails.value = '';
           } else {
             fetch(`https://who-came-by-bot.herokuapp.com/sendMeMessage?message=Message: ${encodeURIComponent(visitorbotText.value)}`, {
               mode: 'no-cors'
